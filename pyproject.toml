@@ -20,6 +20,11 @@ enable = [
 test-skip = ["*-macosx_*"]
 test-command = "python -c \"import lupa\" && python -c \"import lupa.lua54\" "
 
+[tool.setuptools]
+# Work around new-twine + old-packaging validation bug.
+# See https://github.com/pypa/twine/issues/1216
+license-files = []
+
 [tool.cibuildwheel.windows]
 archs = ["AMD64", "x86", "ARM64"]
 test-command = "python -c \"import lupa\" && python -c \"import lupa.lua54\" && python -c \"import lupa.luajit21\" "
