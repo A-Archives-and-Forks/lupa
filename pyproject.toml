@@ -1,5 +1,28 @@
+[project]
+name = "lupa"
+description = "Python wrapper around Lua and LuaJIT"
+authors = [
+    {name="Stefan Behnel", email="stefan_ml@behnel.de"},
+]
+maintainers = [
+    {name="Lupa-dev mailing list", email="lupa-dev@freelists.org"},
+]
+license = 'MIT style'
+requires-python = ">= 3.8"
+dynamic = ["classifiers", "readme", "version"]
+
+[project.urls]
+Homepage = "https://github.com/scoder/lupa"
+Issues = "https://github.com/scoder/lupa/issues"
+Changelog = "https://github.com/scoder/lupa/blob/master/CHANGES.rst"
+
 [build-system]
 requires = ["Cython>=3.2.4", "setuptools"]
+
+[tool.setuptools]
+# Work around new-twine + old-packaging validation bug.
+# See https://github.com/pypa/twine/issues/1216
+license-files = []
 
 [tool.cibuildwheel]
 build-verbosity = 2
@@ -19,11 +42,6 @@ enable = [
     ]
 test-skip = ["*-macosx_*"]
 test-command = "python -c \"import lupa\" && python -c \"import lupa.lua54\" "
-
-[tool.setuptools]
-# Work around new-twine + old-packaging validation bug.
-# See https://github.com/pypa/twine/issues/1216
-license-files = []
 
 [tool.cibuildwheel.windows]
 archs = ["AMD64", "x86", "ARM64"]

@@ -24,10 +24,9 @@ extra_setup_args = {}
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 
-# support 'test' target if setuptools/distribute is available
-
-if 'setuptools' in sys.modules:
-    extra_setup_args['test_suite'] = 'lupa.tests.suite'
+## support 'test' target if setuptools is available
+#if 'setuptools' in sys.modules:
+#    extra_setup_args['test_suite'] = 'lupa.tests.suite'
 
 
 class PkgConfigError(RuntimeError):
@@ -504,16 +503,7 @@ cython_dependency = ([
 setup(
     name="lupa",
     version=VERSION,
-    author="Stefan Behnel",
-    author_email="stefan_ml@behnel.de",
-    maintainer="Lupa-dev mailing list",
-    maintainer_email="lupa-dev@freelists.org",
-    url="https://github.com/scoder/lupa",
-
-    description="Python wrapper around Lua and LuaJIT",
-
     long_description=long_description,
-    license='MIT style',
     classifiers=[
         dev_status(VERSION),
         'Intended Audience :: Developers',
