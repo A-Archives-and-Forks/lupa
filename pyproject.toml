@@ -7,7 +7,7 @@ authors = [
 maintainers = [
     {name="Lupa-dev mailing list", email="lupa-dev@freelists.org"},
 ]
-license = 'MIT style'
+license = 'MIT'
 requires-python = ">= 3.8"
 dynamic = ["classifiers", "readme", "version"]
 
