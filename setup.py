@@ -515,7 +515,6 @@ setup(
         'Operating System :: OS Independent',
         'Topic :: Software Development',
     ],
-    python_requires=">=3.8",
 
     packages=['lupa'],
     setup_requires=[cython_dependency],

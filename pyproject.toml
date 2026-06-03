@@ -8,8 +8,12 @@ maintainers = [
     {name="Lupa-dev mailing list", email="lupa-dev@freelists.org"},
 ]
 license = 'MIT'
-requires-python = ">= 3.8"
 dynamic = ["classifiers", "readme", "version"]
+requires-python = ">= 3.8"
+
+# Work around new-twine + old-packaging validation bug.
+# See https://github.com/pypa/twine/issues/1216
+license-files = ["LICENSE.txt"]
 
 [project.urls]
 Homepage = "https://github.com/scoder/lupa"
@@ -18,11 +22,6 @@ Changelog = "https://github.com/scoder/lupa/blob/master/CHANGES.rst"
 
 [build-system]
 requires = ["Cython>=3.2.4", "setuptools"]
-
-[tool.setuptools]
-# Work around new-twine + old-packaging validation bug.
-# See https://github.com/pypa/twine/issues/1216
-license-files = []
 
 [tool.cibuildwheel]
 build-verbosity = 2
