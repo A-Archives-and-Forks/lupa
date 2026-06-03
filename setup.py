@@ -304,9 +304,10 @@ def use_bundled_lua(path, macros):
     if libname == 'lua52':
         lua_sources.extend(['lbitlib.c', 'lcorolib.c', 'lctype.c'])
     src_dir = os.path.dirname(makefile)
+    rel_src_dir = os.path.relpath(src_dir, basedir)
     ext_libraries = [
         [libname, {
-            'sources': [os.path.join(src_dir, src) for src in lua_sources],
+            'sources': [os.path.join(rel_src_dir, src) for src in lua_sources],
             'include_dirs': [src_dir],
             'macros': macros,
         }]
