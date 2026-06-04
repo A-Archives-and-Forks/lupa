@@ -505,6 +505,7 @@ setup(
     name="lupa",
     version=VERSION,
     long_description=long_description,
+    license="MIT",
     classifiers=[
         dev_status(VERSION),
         'Intended Audience :: Developers',

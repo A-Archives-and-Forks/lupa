@@ -7,8 +7,7 @@ authors = [
 maintainers = [
     {name="Lupa-dev mailing list", email="lupa-dev@freelists.org"},
 ]
-license = 'MIT'
-dynamic = ["classifiers", "readme", "version"]
+dynamic = ["classifiers", "license", "readme", "version"]
 requires-python = ">= 3.8"
 
 # Work around new-twine + old-packaging validation bug.
