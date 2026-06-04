@@ -99,7 +99,7 @@ jobs:
         arch: x64
 
     - name: Build wheel
-      run: python setup.py sdist build_ext -i -j6 bdist_wheel
+      run: python setup.py sdist build_ext -i -j7 bdist_wheel
       env:
         SETUP_OPTIONS: ${{ !contains(matrix.lua-version, 'luajit') && (contains(matrix.lua-version, 'bundle') && '--use-bundle' || '--no-luajit') || '' }}
         CFLAGS: ${{ env.CFLAGS }} ${{ env.CFLAGS_LTO }}
