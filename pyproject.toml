@@ -12,7 +12,7 @@ requires-python = ">= 3.8"
 
 # Work around new-twine + old-packaging validation bug.
 # See https://github.com/pypa/twine/issues/1216
-license-files = ["LICENSE.txt"]
+#license-files = ["LICENSE.txt"]
 
 [project.urls]
 Homepage = "https://github.com/scoder/lupa"
